@@ -123,7 +123,7 @@ if run_job:
     generate_performance_plots(recall=recall, prec=prec, F1_score=F1_score, predicted_values=predicted_values,
                                tp_pred_scores=tp_pred_scores, fp_pred_scores=fp_pred_scores, figures_dir=figures_dir)
 
-    statistics_file = os.path.join(config.output_dir, "particle_picking_statistics.csv")
+    statistics_file = os.path.join(config.output_dir, "pp_statistics.csv")
 
     device = get_device()
     checkpoint = torch.load(model_path, map_location=device)
