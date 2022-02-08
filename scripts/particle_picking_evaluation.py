@@ -82,8 +82,7 @@ if run_job:
     unique_peaks_number = len(predicted_values)
 
     predicted_coordinates = np.array(predicted_coordinates)
-
-    prec, recall, tp_true, tp_pred, fp_pred, tp_pred_scores, fp_pred_scores, *_ = \
+    prec, recall, tp_true, tp_pred, fp_pred, tp_pred_scores, fp_pred_scores, fn, *_ = \
         precision_recall_calculator(
             predicted_coordinates=predicted_coordinates,
             value_predicted=predicted_values,

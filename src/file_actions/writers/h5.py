@@ -528,7 +528,7 @@ def segment_and_write(data_path: str, model: UNet3D, label_name: str) -> None:
                                             subtomo_name)
             subtomos_data.append(data_file[subtomo_h5_internal_path][:])
         subtomos_data = np.array(subtomos_data)
-        subtomos_data -= np.mean(subtomos_data)
+        subtomos_data = subtomos_data - np.mean(subtomos_data)
         subtomos_data = subtomos_data / np.std(subtomos_data)
         print("data_mean = {}, data_std = {}".format(np.mean(subtomos_data), np.std(subtomos_data)))
         subtomos_data = list(subtomos_data)

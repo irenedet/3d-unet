@@ -19,4 +19,4 @@ srun -t 3-00:00:00 -c 1 --mem 4G \
     --printshellcmds \
     --latency-wait 30 \
     --max-jobs-per-second 1 \
-    --max-status-checks-per-second 0.1
+    --max-status-checks-per-second 0.1 
